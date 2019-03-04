@@ -1,3 +1,9 @@
+# перед использванием поставить lxml, request командой:
+# "pip install lxml request"
+
+# запускать скрипт командой "python3 anekotru_day_parser.py anekdot",
+# где anekdot - директория кудаположить результат
+
 import sys
 import requests
 from lxml import html
@@ -6,7 +12,8 @@ import datetime
 
 path = sys.argv[1]
 url = 'https://www.anekdot.ru/release/anekdot/day'
-headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36'}
+headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) \
+    AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36'}
 
 response = requests.get(url, headers=headers)
 
